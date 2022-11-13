@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import chair from "../../../../assets/images/chair.png";
 import { DayPicker } from 'react-day-picker';
 import backgroundimage from '../../../../assets/images/bg.png'
