@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import chair from "../../../../assets/images/chair.png";
 import { DayPicker } from 'react-day-picker';
-import { format } from 'date-fns';
+import backgroundimage from '../../../../assets/images/bg.png'
 
 
-const AppointmentBanner = () => {
-    const [selectedDate, setSelectedDate] = useState(new Date());
+const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
+   
   return (
-    <header>
+    <header
+
+ className='mt-32'
+                style={{
+                    background:`url(${backgroundimage})`
+                }}
+                >
       <div className="hero my-6">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
@@ -20,10 +26,9 @@ const AppointmentBanner = () => {
            selected={selectedDate}
            onSelect={setSelectedDate}
           
-          
           />;
 
-          <p>You have selected date:{format(selectedDate,'PP')}</p>
+       
           </div>
         </div>
       </div>
